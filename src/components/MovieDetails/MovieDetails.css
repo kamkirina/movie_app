@@ -1,0 +1,49 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding-right: 20px;
+  box-shadow: 5px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.movie__img {
+  display: block;
+  background-image: url(../../img/poster.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+.movie__title {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 12px 0 7px;
+}
+.movie__date {
+  color: #827e7e;
+  margin-bottom: 9px;
+}
+
+.movie__genre {
+  list-style: none;
+  display: flex;
+  color: rgba(0, 0, 0, 0.65);
+  justify-content: flex-start;
+  padding-left: 0;
+}
+
+.movie__genre li {
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+  margin-right: 8px;
+  padding: 2px 5px;
+}
+
+.movie__genre li:last-child {
+  margin-right: 0;
+}
+
+.movie__text {
+  margin-bottom: 50px;
+}

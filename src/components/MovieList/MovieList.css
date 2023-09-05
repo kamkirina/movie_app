@@ -1,0 +1,10 @@
+.movie__list {
+  padding: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 37px;
+  column-gap: 37px;
+  max-width: 1100px;
+  height: auto;
+}
