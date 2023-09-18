@@ -1,4 +1,4 @@
-.wrapper {
+.movie__card {
   display: grid;
   grid-template-columns: 40% 60%;
   padding-right: 20px;
@@ -7,12 +7,9 @@
 
 .movie__img {
   display: block;
-  background-image: url(../../img/poster.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
+  width: 90%;
   height: auto;
+  margin: auto 0;
 }
 .movie__title {
   font-size: 20px;

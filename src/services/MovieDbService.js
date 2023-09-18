@@ -18,14 +18,17 @@ export default class MovieDbService {
 
   async getMovies(search) {
     const res = await this.getResourse(search)
-    return res.results
+    console.log(res)
+    return res.results.map(this._transformResult)
+  }
+
+  _transformResult(movie) {
+    return {
+      id: movie.id,
+      title: movie.title,
+      date: movie.release_date,
+      description: movie.overview,
+      poster: movie.poster_path,
+    }
   }
 }
-
-const movies = new MovieDbService()
-
-movies.getMovies('return').then((movies) => {
-  movies.forEach((el) => {
-    console.log(el.title)
-  })
-})
