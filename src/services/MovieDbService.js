@@ -9,17 +9,20 @@ export default class MovieDbService {
     },
   }
 
-  async getResourse(search) {
-    const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=1`
+  async getResourse(search, page) {
+    const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=${page}`
     const res = await fetch(SEARCH_URL, this.options)
-
-    return res.json()
+    if (!res.ok) {
+      throw new Error('received ${res.status}')
+    }
+    return await res.json()
   }
 
-  async getMovies(search) {
-    const res = await this.getResourse(search)
-    console.log(res)
-    return res.results.map(this._transformResult)
+  async getMovies(search, page) {
+    const res = await this.getResourse(search, page)
+
+    return res
+    // return res.results.map(this._transformResult)
   }
 
   _transformResult(movie) {
