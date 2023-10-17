@@ -10,9 +10,15 @@ input {
   background-color: transparent;
 }
 .wrapper {
-  max-width: 1010px;
+  max-width: 1210px;
   margin: 0 auto;
   padding: 13px 36px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 426px) {
+  .wrapper {
+    padding: 0;
+  }
 }

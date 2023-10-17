@@ -3,6 +3,7 @@
   grid-template-columns: 40% 60%;
   padding-right: 20px;
   box-shadow: 5px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .movie__img {
@@ -15,6 +16,18 @@
   font-size: 20px;
   line-height: 28px;
   margin: 12px 0 7px;
+  padding-right: 70px;
+}
+.movie__stat {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 55px;
+  height: 55px;
+  border: 2px solid;
+  border-radius: 50px;
+  padding: 6px 0;
+  text-align: center;
 }
 .movie__date {
   color: #827e7e;
@@ -42,5 +55,29 @@
 }
 
 .movie__text {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+}
+
+.movie__rate {
+  margin-bottom: 30px;
+}
+
+/*//////////////////////////////////*/
+@media (max-width: 426px) {
+  .movie__card {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .movie__img {
+    display: inline-block;
+    width: 25%;
+    margin-top: 0;
+  }
+  .movie__info {
+    position: absolute;
+    top: 0;
+    left: 35%;
+  }
 }
